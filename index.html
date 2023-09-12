@@ -18,6 +18,8 @@
     <!-- custom css  -->
     <link rel="stylesheet" href="./assets/customStyle.css">
 
+    <script src="./assets/textAnimate.js"></script>
+
 </head>
 
 <body>
@@ -60,50 +62,24 @@
         </div>
     </header>
     <main>
-        <!-- <section class="container mx-auto h-[85vh]">
-            <div class="flex flex-col md:flex-row mx-auto items-center justify-around pt-40 gap-10">
-                <div class="md:w-1/2 mt-10 order-2 md:mt-0">
-                    <img src="./assets/images/profill.png" alt=" Image" class="mx-auto md:mx-0 md:float-right" />
-                </div>
-                <div class="md:w-1/2 mx-auto order-1 text-center md:text-left">
-                    <p class="text-xl font-semibold ">Hello!</p>
-                    <h1 class="text-4xl font-bold">I'm..Creative </h1>
-                    <h3 class="ml9">
-                        <span class="text-wrapper">
-                            <span class="letters">Web Designer & Web developer...</span>
-                        </span>
-                    </h3>
-                    <button class="btn bg-[#FF6B00] text-white hover:bg-black">Hire ME!</button>
-                    <p class="pt-5">FIND WITH ME</p>
-                    <div class="flex items-center text-center space-x-4 pt-4 ">
-                        <div class="bg-white p-4 rounded-lg shadow-md hover:bg-black">
-                            <i class="fa-brands fa-whatsapp fa-2x icon text-[#FF6B00] "></i>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow-md hover:bg-black">
-                            <i class="fa-brands fa-linkedin fa-2x icon text-[#FF6B00]"></i>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow-md hover:bg-black">
-                            <i class="fa-brands fa-github fa-2x icon text-[#FF6B00]"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
 
         <!-- bannner section  -->
         <section class="h-screen flex flex-col justify-center items-center">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
                 <!-- Image -->
-                <div class="md:flex md:justify-center md:items-center">
-                    <img src="./assets/images/profill.png" alt="Image" class="w-450 h-450 bg-orange-300" />
+                <div class=" md:flex md:justify-center md:items-center ">
+                    <img src="./assets/images/profill.png" alt="Image"
+                        class="w-450 h-450 bg-[url('./assets/images/bg.png')] bg-center" />
                 </div>
+                <!-- <div class="md:flex md:justify-center md:items-center">
+                    <img src="./assets/images/profill.png" alt="Image" class="w-450 h-450 animated-blob" />
+                </div> -->
                 <!-- Text Content -->
                 <div class="text-center md:text-left">
                     <p class="text-2xl font-semibold ">Hello! I'm..</p>
-                    <!-- <h1 class="text-lg md:text-xl font-semibold mt-4">I'm Creative...</h1> -->
-                    <h1 class="text-3xl md:text-4xl font-bold">Full Stack Deveoper</h1>
+                    <h1 class="text-3xl md:text-4xl font-bold"><span id="animationTarget"></span></h1>
                     <button class="btn mt-5 bg-[#FF6B00] text-white hover:bg-black">Hire ME!</button>
-                    <p class="pt-5">FIND ME ON:</p>
+                    <p class="pt-10">FIND ME ON:</p>
                     <div class="flex items-center text-center space-x-4 pt-4 ">
                         <div class="bg-white p-4 rounded-lg shadow-md hover:bg-black">
                             <i class="fa-brands fa-whatsapp fa-2x icon text-[#FF6B00] "></i>
@@ -138,7 +114,8 @@
         <!-- service section  -->
         <section class="h-[80vh] flex justify-center items-center">
             <div class="container mx-auto px-4">
-                <h1 class="text-lg md:text-3xl lg:text-4xl font-semibold mt-4 text-center hover:text-[#FF6B00]">WHAT I DO</h1>
+                <h1 class="text-lg md:text-3xl lg:text-4xl font-semibold mt-4 text-center hover:text-[#FF6B00]">WHAT I
+                    DO</h1>
                 <p class="text-lg pt-4 md:text-2xl lg:text-3xl font-semibold text-center text-gray-500 ">My service!</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center pt-8 mt-5">
                     <!-- Card 1 -->
@@ -165,7 +142,8 @@
                         class="bg-white shadow-md rounded-lg p-6 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md hover:border-[#FF6B00] hover:border-2 hover:ring-2 hover:ring-[#FF6B00]">
                         <img src="./assets/images/wordpress.png" alt="Web Development Icon"
                             class="h-12 w-12 mb-4 mx-auto" />
-                        <h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 text-center">WordPress Customization</h2>
+                        <h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 text-center">WordPress
+                            Customization</h2>
                         <p class="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Nullam
                             condimentum malesuada justo.</p>
@@ -173,7 +151,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- skill section  -->
         <section class="h-[85vh] flex flex-col justify-center items-center">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
@@ -371,50 +349,92 @@
 
             </div>
         </section>
+
+        <!-- contact section  -->
+        <section class="container mx-auto bg-slate-200 mb-4 px-4 py-16 flex flex-col lg:flex-row">
+            <!-- Left Side: Google Map -->
+           
+            <div class="w-full lg:w-1/2">
+                <!-- Google Map embed  -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5164.014257250204!2d90.36187627218627!3d23.764864650649194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1694349800550!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="shadow-md"></iframe>
+            </div>
+
+            <!-- Right Side: Contact Form -->
+            <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
+                <h2 class="text-2xl font-semibold mb-4">Contact me</h2>
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-semibold">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name"
+                            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-[#FF6B00] transition duration-150"
+                            required />
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-semibold">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email"
+                            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-[#FF6B00] transition duration-150"
+                            required />
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-semibold">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Your Message"
+                            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-[#FF6B00] transition duration-150"
+                            required></textarea>
+                    </div>
+                    <div class="mb-6">
+                        <button type="submit"
+                            class="w-full bg-[#FF6B00] text-white py-2 px-4 rounded hover:bg-black focus:outline-none focus:bg-black transition duration-150">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
     </main>
 
     <!-- footer  -->
-    <!-- <footer class="bg-white h-[600px] mx-auto">
+    <footer class="container bg-gray-800 h-[50vh] mx-auto">
         <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
             <nav class="flex flex-wrap justify-center -mx-5 -my-2">
                 <div class="px-5 py-2">
-                    <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    <a href="#" class="text-xl leading-6 text-white hover:text-[#FF6B00]">
                         About
                     </a>
                 </div>
                 <div class="px-5 py-2">
-                    <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    <a href="#" class="text-xl leading-6 text-white hover:text-[#FF6B00]">
                         Blog
                     </a>
                 </div>
                 <div class="px-5 py-2">
-                    <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    <a href="#" class="text-xl leading-6 text-white hover:text-[#FF6B00]">
                         Team
                     </a>
                 </div>
                 <div class="px-5 py-2">
-                    <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    <a href="#" class="text-xl leading-6 text-white hover:text-[#FF6B00]">
                         Pricing
                     </a>
                 </div>
                 <div class="px-5 py-2">
-                    <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    <a href="#" class="text-xl leading-6 text-white hover:text-[#FF6B00]">
                         Contact
                     </a>
                 </div>
                 <div class="px-5 py-2">
-                    <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    <a href="#" class="text-xl leading-6 text-white hover:text-[#FF6B00]">
                         Terms
                     </a>
                 </div>
             </nav>
             <div class="flex justify-center mt-8 space-x-6">
             </div>
-            <p class="mt-8 text-base leading-6 text-center text-gray-400">
-                © 2021 SomeCompany, Inc. All rights reserved.
+            <p class="mt-8 text-base leading-6 text-center text-white">
+                © 2023 All rights reserved.
             </p>
         </div>
-    </footer> -->
+    </footer>
 
     <!-- for toggle menu  -->
     <script>
@@ -459,6 +479,45 @@
 
         // Show the "All" tab by default
         document.getElementById('all').style.display = 'grid';
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const textArray = ["Web Designer", "Web Developer"];
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function typeText() {
+                const target = document.getElementById("animationTarget");
+                const currentText = textArray[textIndex];
+
+                if (!isDeleting && charIndex <= currentText.length) {
+                    target.innerHTML = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                } else if (isDeleting && charIndex >= 0) {
+                    target.innerHTML = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                }
+
+                if (charIndex > currentText.length) {
+                    isDeleting = true;
+                }
+
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    textIndex++;
+                    if (textIndex === textArray.length) {
+                        textIndex = 0;
+                    }
+                }
+
+                setTimeout(typeText, isDeleting ? 250 : 500);
+            }
+
+            // Start the animation
+            typeText();
+        });
     </script>
 
 </body>
